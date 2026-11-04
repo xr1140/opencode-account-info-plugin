@@ -1,7 +1,7 @@
 # opencode-account-info
 
 A TUI plugin for OpenCode that adds a **Limits** section to the session sidebar,
-under the built-in sections (MCP, context, todo), and a `/usage-forecast`
+pinned just above the working-directory footer, and a `/usage-forecast`
 dialog with the full picture.
 
 It shows the usage limits of the OpenCode Console workspace you are signed in
@@ -91,9 +91,10 @@ emptyAt   = now + (limit - used) / rate
 
 ## Limitations
 
-- The section appears after every built-in sidebar section. The slot API can
-  append to `sidebar.content`, but it cannot insert between two built-in
-  sections, so it sits below MCP (and below context, limit, and todo).
+- The section is mounted with `before: "sidebar.footer"`, so it is pinned
+  above the working-directory path and branch, outside the scrolling content.
+  If OpenCode's **Getting started** card is visible, it appears above that card
+  too, since the card and the path share the footer slot.
 - When you are not signed in to OpenCode Console the endpoint returns `null`
   and the section hides itself. The dialog says how to sign in.
 - `budgets` is empty for service accounts, and on workspaces without spend

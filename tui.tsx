@@ -96,7 +96,7 @@ export default Plugin.define({
     }))
 
     context.ui.slot({
-      append: "sidebar.content",
+      before: "sidebar.footer",
       render: () => <SidebarUsage context={context} info={info} onOpen={openDialog} />,
     })
 
