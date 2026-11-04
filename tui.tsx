@@ -384,8 +384,8 @@ function MeterDetail(props: { theme: Theme; label: string; duration: number; met
       <Show when={rate}>
         {(value) => (
           <text fg={props.theme.text.muted} wrapMode="word">
-            {"      "}
-            {formatPercent(value().perDay)}/day
+            {"       "}
+            {formatPercent(value().perDay).padStart(4)}/day
             {value().over ? ` → ${formatPercent(value().projected)} by reset` : ""}
             {value().emptyAt ? ` · empty in ${formatDuration(value().emptyAt! - now)}` : ""}
           </text>
