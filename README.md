@@ -1,4 +1,4 @@
-# opencode-account-info
+# opencode-account-info-plugin
 
 A TUI plugin for OpenCode that adds a **Limits** section to the session sidebar,
 pinned just above the working-directory footer, and a `/usage-forecast`
@@ -32,8 +32,8 @@ needs no API key, no browser session, and never scrapes the Console page.
 Clone it into OpenCode's plugin directory, where it is discovered automatically:
 
 ```sh
-git clone https://github.com/xr1140/opencode-account-info \
-  ~/.config/opencode/plugins/opencode-account-info
+git clone https://github.com/xr1140/opencode-account-info-plugin \
+  ~/.config/opencode/plugins/opencode-account-info-plugin
 ```
 
 Or list any checkout in `~/.config/opencode/cli.json`:
