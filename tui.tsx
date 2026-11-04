@@ -153,7 +153,7 @@ function SidebarUsage(props: {
 
   return (
     <Show when={rowCount() > 0}>
-      <box>
+      <box paddingBottom={1}>
         <box
           flexDirection="row"
           gap={1}
