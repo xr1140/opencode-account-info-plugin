@@ -29,7 +29,14 @@ needs no API key, no browser session, and never scrapes the Console page.
 
 ## Enable it
 
-Add the checkout to `~/.config/opencode/cli.json`:
+Clone it into OpenCode's plugin directory, where it is discovered automatically:
+
+```sh
+git clone https://github.com/xr1140/opencode-account-info \
+  ~/.config/opencode/plugins/opencode-account-info
+```
+
+Or list any checkout in `~/.config/opencode/cli.json`:
 
 ```json
 {
@@ -37,8 +44,9 @@ Add the checkout to `~/.config/opencode/cli.json`:
 }
 ```
 
-OpenCode watches that file and the plugin sources, so saving either reloads the
-plugin without a restart. Remove the entry to disable it.
+OpenCode watches the config and the plugin sources, so saving either reloads
+the plugin without a restart. With the `cli.json` option, remove the entry to
+disable it.
 
 Alternatively, put the directory under `~/.config/opencode/plugins/` (or
 `.opencode/plugins/` in a project) and it is discovered automatically. The
