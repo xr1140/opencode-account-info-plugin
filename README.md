@@ -14,6 +14,10 @@ then the three Go windows follow.
 - **Console budgets** — what is left on each spend budget, when it resets, the
   daily burn rate, and the projected spend at reset.
 
+![The Limits section in the OpenCode sidebar](screenshots/sidebar.png)
+
+*The Limits section, pinned above the working-directory path.*
+
 ## Where the numbers come from
 
 The plugin calls the local OpenCode server:
@@ -61,6 +65,10 @@ uses.
 - Run `/usage-forecast`, or pick **Show usage forecast** in the command palette
   (`Ctrl+P`).
 
+![The Usage forecast dialog](screenshots/usage-forecast.png)
+
+*The full forecast: Go windows, reset times, burn rates, and projections.*
+
 The data refreshes every 60 seconds and after each turn.
 
 ## Files
@@ -69,6 +77,7 @@ The data refreshes every 60 seconds and after each turn.
 | --- | --- |
 | `tui.tsx` | Plugin entrypoint: data loading, sidebar section, dialog, command |
 | `forecast.ts` | Response types, window math, formatting |
+| `screenshots/` | Sidebar and dialog screenshots used in this README |
 
 ## How the forecast works
 
